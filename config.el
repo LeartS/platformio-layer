@@ -10,6 +10,3 @@
 ;;; License: GPLv3
 
 ;; Variables
-
-;; TODO fix this for spacemacs26
-;;(spacemacs|defvar-company-backends irony-mode)
