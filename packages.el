@@ -32,11 +32,12 @@
                 (irony-cdb-autosetup-compile-options)))
     ))
 
-(defun platformio/init-company-irony ()
-  (use-package company-irony
-    :defer t
-    :init
-    (push 'company-irony company-backends-irony-mode)))
+;; TODO setup irony for emacs26
+;; (defun platformio/init-company-irony ()
+;;   (use-package company-irony
+;;     :defer t
+;;     :init
+;;     (push 'company-irony company-backends-irony-mode)))
 
 (defun platformio/init-irony-eldoc ()
   (use-package irony-eldoc
@@ -44,8 +45,9 @@
     :init
     (add-hook 'irony-mode-hook 'irony-eldoc)))
 
-(defun platformio/post-init-company ()
-  (spacemacs|add-company-hook irony-mode))
+;; TODO setup company for emacs26
+;; (defun platformio/post-init-company ()
+;;   (spacemacs|add-company-hook irony-mode))
 
 (defun platformio/init-platformio-mode ()
   (use-package platformio-mode

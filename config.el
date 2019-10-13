@@ -11,5 +11,5 @@
 
 ;; Variables
 
-(spacemacs|defvar-company-backends irony-mode)
-(spacemacs|defvar-company-backends irony-mode)
+;; TODO fix this for spacemacs26
+;;(spacemacs|defvar-company-backends irony-mode)
