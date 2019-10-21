@@ -13,7 +13,7 @@
   '(
     company
     irony
-    company-irony
+    (company-irony :toggle (configuration-layer/package-used-p 'company))
     irony-eldoc
     platformio-mode
     ))
@@ -35,8 +35,10 @@
 (defun platformio/init-company-irony ()
   (use-package company-irony
     :defer t
-    :config
-    (add-to-list 'company-backends 'company-irony)))
+    :init
+    (spacemacs|add-company-backends
+       :backends company-irony
+       :modes irony-mode)))
 
 (defun platformio/init-irony-eldoc ()
   (use-package irony-eldoc
