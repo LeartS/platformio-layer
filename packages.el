@@ -11,7 +11,6 @@
 
 (defconst platformio-packages
   '(
-    company
     irony
     (company-irony :toggle (configuration-layer/package-used-p 'company))
     irony-eldoc
