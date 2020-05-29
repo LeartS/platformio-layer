@@ -11,9 +11,8 @@
 
 (defconst platformio-packages
   '(
-    company
     irony
-    company-irony
+    (company-irony :toggle (configuration-layer/package-used-p 'company))
     irony-eldoc
     platformio-mode
     ))
@@ -36,16 +35,15 @@
   (use-package company-irony
     :defer t
     :init
-    (push 'company-irony company-backends-irony-mode)))
+    (spacemacs|add-company-backends
+       :backends company-irony
+       :modes irony-mode)))
 
 (defun platformio/init-irony-eldoc ()
   (use-package irony-eldoc
     :defer t
     :init
     (add-hook 'irony-mode-hook 'irony-eldoc)))
-
-(defun platformio/post-init-company ()
-  (spacemacs|add-company-hook irony-mode))
 
 (defun platformio/init-platformio-mode ()
   (use-package platformio-mode

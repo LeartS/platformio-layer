@@ -10,6 +10,3 @@
 ;;; License: GPLv3
 
 ;; Variables
-
-(spacemacs|defvar-company-backends irony-mode)
-(spacemacs|defvar-company-backends irony-mode)
